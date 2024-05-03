@@ -1,11 +1,11 @@
 // Importar dinamicamente os módulos website-scraper e website-scraper-puppeteer
 import('website-scraper').then(scraperModule => {
     import('website-scraper-puppeteer').then(puppeteerModule => {
-        const PuppeteerPlugin = puppeteerModule.default; // Ajuste aqui para pegar o construtor adequado
-        const path = require('path'); // path ainda pode ser usado com require se for um módulo CommonJS
+        const PuppeteerPlugin = puppeteerModule.default;
+        const path = require('path');
 
         scraperModule.default({
-            urls: ['https://metodofanart.com.br/'],
+            urls: ['https://example.com.br/'],
             directory: path.resolve(__dirname, 'src'),
             plugins: [
                 new PuppeteerPlugin({
